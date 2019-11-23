@@ -1,0 +1,274 @@
+.cbtn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,
+  background-color .15s ease-in-out,
+  border-color .15s ease-in-out,
+  box-shadow .15s ease-in-out;
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  }
+  &:focus, &:hover {
+    text-decoration: none;
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: .65;
+    box-shadow: none;
+      .cbtn-spinner-border {
+        animation: spinner-border;
+      }
+
+  }
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    background-image: none;
+  }
+  &-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+  }
+
+  &-sm {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+  }
+  &-spinner-border {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    vertical-align: text-bottom;
+    border: .2em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border .75s linear infinite;
+    box-sizing: border-box;
+  }
+
+  &-link {
+    font-weight: 400;
+    color: $bg-primary;
+    background-color: $bg-link;
+
+    &:hover {
+      color: #0056b3;
+      text-decoration: underline;
+      background-color: $bg-link-hover;
+      border-color: transparent;
+    }
+    &.focus, &:focus {
+      text-decoration: underline;
+      border-color: transparent;
+      box-shadow: none;
+    }
+    &:disabled, &.disabled {
+      color: $bg-secondary;
+      text-decoration: none;
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active{
+      color: #0056b3;
+      text-decoration: underline;
+    }
+  }
+  &-primary {
+    color: $white;
+    background-color: $bg-primary;
+    border-color: $bg-primary;
+    &:hover {
+      color: $white;
+      background-color: $bg-primary-hover;
+      border-color: $bg-primary-active;
+    }
+
+    &:focus, &.focus {
+      box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+    }
+    &.disabled,
+    &:disabled {
+      color: $white;
+      background-color: $bg-primary;
+      border-color: $bg-primary;
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      color: $white;
+      background-color: $bg-primary-active;
+      border-color: #005cbf;
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+      }
+    }
+  }
+  &-secondary {
+    color: $white;
+    background-color: $bg-secondary;
+    border-color: $bg-secondary;
+    &:hover {
+      color: $white;
+      background-color: $bg-secondary-hover;
+      border-color: $bg-secondary-active;
+    }
+
+    &:focus, &.focus {
+      box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5);
+    }
+    &.disabled,
+    &:disabled {
+      color: $white;
+      background-color: $bg-secondary;
+      border-color: $bg-secondary;
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      color: $white;
+      background-color: $bg-secondary-active;
+      border-color: #4e555b;
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5);
+      }
+    }
+  }
+  &-success {
+    color: $white;
+    background-color: $bg-success;
+    border-color: $bg-success;
+    &:hover {
+      color: $white;
+      background-color: $bg-success-hover;
+      border-color: $bg-success-active;
+    }
+
+    &:focus, &.focus {
+      box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5);
+    }
+    &.disabled,
+    &:disabled {
+      color: $white;
+      background-color: $bg-success;
+      border-color: $bg-success;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      color: $white;
+      background-color: $bg-success-active;
+      border-color: #1c7430;
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(40,167,69,.5);
+      }
+    }
+  }
+  &-danger {
+    color: $white;
+    background-color: $bg-danger;
+    border-color: $bg-danger;
+    &:hover {
+      color: $white;
+      background-color: $bg-danger-hover;
+      border-color: #bd2130;
+    }
+
+    &:focus, &.focus {
+      box-shadow: 0 0 0 0.2rem rgba(220,53,69,.5);
+    }
+    &.disabled,
+    &:disabled {
+      color: $white;
+      background-color: $bg-danger;
+      border-color: $bg-danger;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      color: $white;
+      background-color: $bg-danger-active;
+      border-color: #b21f2d;
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(220,53,69,.5);
+      }
+    }
+  }
+  &-warning {
+    color: #212529;
+    background-color: $bg-warning;
+    border-color: $bg-warning;
+
+    &:hover {
+      color: #212529;
+      background-color: $bg-warning-hover;
+      border-color: #d39e00;
+    }
+    &:focus, &.focus {
+      box-shadow: 0 0 0 0.2rem rgba(255,193,7,.5);
+    }
+    &.disabled,
+    &:disabled {
+      color: #212529;
+      background-color: $bg-warning;
+      border-color: $bg-warning;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      color: #212529;
+      background-color: $bg-warning-active;
+      border-color: #c69500;
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(255,193,7,.5);
+      }
+    }
+  }
+
+}
+a{
+  &.cbtn {
+      text-decoration: none;
+    &-link {
+      &:hover {
+        text-decoration: underline;
+      }
+      &.disabled,
+      &:disabled {
+        text-decoration: none;
+      }
+      &:not(:disabled):not(.disabled):active,
+      &:not(:disabled):not(.disabled).active {
+        text-decoration: underline;
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+  }
+}
+
+a.cbtn.disabled{
+  pointer-events: none;
+}
+
+
+@keyframes spinner-border {
+  to { transform: rotate(360deg); }
+}
